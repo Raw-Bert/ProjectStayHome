@@ -18,6 +18,7 @@ public class CameraZoomTransition : MonoBehaviour
             //zoom camera in
             //position lerp vector3(this.position, clickableObject.position.25f) 
             this.transform.position = Vector3.Lerp(this.transform.position, clickableObject.transform.position, .25f);
+            //if (this.transform.position == clickableObject.transform.position)
             isZoomed = true;
         }
 
