@@ -37,7 +37,7 @@ namespace TextBoxSystem
         {
             while (dialogLines.Count > 0)
             {
-                inst = Instantiate(popupPrefab, inst == null ? transform : currPopup.transform, false);
+                inst = Instantiate(popupPrefab, transform, false);
                 inst.SetActive(false);
                 //inst.GetComponent<FadeInOut>().delay = delay;
                 inst.GetComponent<FadeInOut>().fadeoutTime = fadeoutTime;
@@ -70,9 +70,9 @@ namespace TextBoxSystem
                 var textbox = dialogBoxes[0].GetComponent<TextBoxData>();
                 var thetext = dialogBoxes[0].GetComponentInChildren<TMP_Text>();
 
-               // if (!dialogBoxes[0].activeInHierarchy)
-                    if (!dialogBoxes[0].activeInHierarchy)
-                        dialogBoxes[0].SetActive(true);
+                // if (!dialogBoxes[0].activeInHierarchy)
+                if (!dialogBoxes[0].activeInHierarchy)
+                    dialogBoxes[0].SetActive(true);
 
                 //TODO: switch the text after each section is complete
                 if (textbox.isSectionComplete)
