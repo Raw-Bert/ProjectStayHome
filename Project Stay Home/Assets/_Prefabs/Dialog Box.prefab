@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4134234877510576421}
   - component: {fileID: 977322803549696024}
   m_Layer: 0
-  m_Name: Mesage
+  m_Name: Dialog Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,6 +63,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.5254902}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -87,7 +88,7 @@ CanvasGroup:
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &977322803549696024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1066283605be445b82abfff146f327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableFadeIn: 1
+  enableFadeIn: 0
+  enableFadeOut: 0
   delay: 0
   fadeoutTime: 0
   fadeinTime: 0
@@ -114,6 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7244205698012847487}
   - component: {fileID: 7244205698012847484}
+  - component: {fileID: 224012274473671515}
   - component: {fileID: 7244205698012847485}
   m_Layer: 0
   m_Name: Text (TMP)
@@ -149,6 +152,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7244205698012847456}
   m_CullTransparentMesh: 0
+--- !u!114 &224012274473671515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7244205698012847456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0dbf014626ce648b8e25d5763aae0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: 1
 --- !u!114 &7244205698012847485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +180,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

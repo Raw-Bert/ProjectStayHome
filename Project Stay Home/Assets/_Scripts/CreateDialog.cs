@@ -1,83 +1,106 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
-
-public class CreateDialog : MonoBehaviour
+namespace TextBoxSystem
 {
-    public GameObject popupPrefab;
-    public float delay, fadeoutTime;
-    private GameObject currPopup, inst;
-    private List<GameObject> popups = new List<GameObject>();
-    private static List<TextBoxData> dialogLines;
-
-    public struct TextBoxData
+    public class CreateDialog : MonoBehaviour
     {
-        List<string> sections;
-        Vector2 position;
-        public void addDialogSection(string txt) => sections.Add(txt);
-        public string getDialogSection(int index) => sections[index];
-        public List<string> getDialogSections() => sections;
-    }
+        public GameObject popupPrefab;
 
-    public static void AddNextDialog(TextBoxData msg) => dialogLines.Add(msg);
+        [Tooltip("Time it takes to fade to nothing")]
+        public float fadeoutTime;
+        private GameObject currPopup, inst;
+        private List<GameObject> dialogBoxes = new List<GameObject>();
+        private static List<TextBoxData> dialogLines = new List<TextBoxData>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        while (dialogLines.Count > 0)
+        public static void AddNextDialog(TextBoxData msg) => dialogLines.Add(msg);
+
+        //this is for testing purposes
+        void Start()
         {
-            inst = Instantiate(popupPrefab, inst == null ? transform : currPopup.transform, false);
-            inst.GetComponent<FadeInOut>().delay = delay;
-            inst.GetComponent<FadeInOut>().fadeoutTime = fadeoutTime;
+            TextBoxData tmp = new TextBoxData();
+            tmp.addDialogSection("this is a test of the abilities of the box thingy");
+            tmp.addDialogSection("it could work... probably not though");
+            AddNextDialog(tmp);
+            tmp = new TextBoxData();
+            tmp.addDialogSection("OK here is a new one");
+            tmp.addDialogSection("I moved it so it looks cooler");
+            tmp.position = new float2(250, 95);
+            AddNextDialog(tmp);
 
-            if (dialogLines.Count > 0)
-                inst.GetComponentInChildren<TMP_Text>().text = dialogLines[0].getDialogSection(0);
-
-            if (inst.transform.parent != transform)
-                inst.GetComponent<RectTransform>().anchorMax =
-                inst.GetComponent<RectTransform>().anchorMin =
-                new Vector2(.5f, 0);
-
-            inst.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-            inst.GetComponent<RectTransform>().localScale = Vector3.one;
-            currPopup = inst;
-            popups.Add(inst);
-            dialogLines.RemoveAt(0);
         }
 
-        for (int index = 0; index < popups.Count; ++index)
+        // Update is called once per frame
+        void Update()
         {
-            if (popups[index] == null)
+            while (dialogLines.Count > 0)
             {
-                popups.RemoveAt(index--);
-                continue;
+                inst = Instantiate(popupPrefab, inst == null ? transform : currPopup.transform, false);
+                inst.SetActive(false);
+                //inst.GetComponent<FadeInOut>().delay = delay;
+                inst.GetComponent<FadeInOut>().fadeoutTime = fadeoutTime;
+
+                var data = inst.AddComponent<TextBoxData>();
+                data.initData(dialogLines[0]);
+                //set initial text
+                if (dialogLines[0].getDialogSections().Count > 0)
+                    inst.GetComponentInChildren<TMP_Text>().text = dialogLines[0].getDialogSection(0);
+
+                if (inst.transform.parent != transform)
+                    inst.GetComponent<RectTransform>().anchorMax =
+                    inst.GetComponent<RectTransform>().anchorMin =
+                    new Vector2(0, 0);
+
+                inst.GetComponent<RectTransform>().anchoredPosition = dialogLines[0].position;
+                inst.GetComponent<RectTransform>().localScale = Vector3.one;
+                currPopup = inst;
+                dialogBoxes.Add(inst);
+                dialogLines.RemoveAt(0);
             }
 
-            if (popups[index].GetComponent<CanvasGroup>().alpha == 0)
+            if (dialogBoxes.Count > 0)
             {
-                if (popups[index].transform.childCount > 1)
+                if (dialogBoxes[0] == null)
                 {
-                    var child = popups[index].transform.GetChild(1);
-                    popups[index].transform.GetChild(1).SetParent(popups[index].transform.parent, false);
-                    if (child.parent == transform)
-                        child.GetComponent<RectTransform>().anchorMax =
-                        child.GetComponent<RectTransform>().anchorMin =
-                        new Vector2(.5f, 1);
-
-                    child.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                    dialogBoxes.RemoveAt(0);
+                    return;
                 }
-                Destroy(popups[index]);
-                //popups[index] = null;
+                var textbox = dialogBoxes[0].GetComponent<TextBoxData>();
+                var thetext = dialogBoxes[0].GetComponentInChildren<TMP_Text>();
+
+               // if (!dialogBoxes[0].activeInHierarchy)
+                    if (!dialogBoxes[0].activeInHierarchy)
+                        dialogBoxes[0].SetActive(true);
+
+                //TODO: switch the text after each section is complete
+                if (textbox.isSectionComplete)
+                    if (textbox.canProgress)
+                    {
+                        textbox.increaseCounter();
+
+                        if (textbox.getCounter() < textbox.getDialogSections().Count)
+                            thetext.text = textbox.getDialogSection();
+                        else
+                            dialogBoxes[0].GetComponent<FadeInOut>().fadeOutInvoke();
+
+                        textbox.canProgress = false;
+                    }
+
+                if (dialogBoxes[0].GetComponent<CanvasGroup>().alpha == 0)
+                {
+                    Destroy(dialogBoxes[0]);
+                    //popups[index] = null;
+                }
+                else
+                {
+                    dialogBoxes[0].GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,
+                        Mathf.Lerp(0, popupPrefab.GetComponent<RectTransform>().sizeDelta.y,
+                            dialogBoxes[0].GetComponent<CanvasGroup>().alpha));
+                }
+                // popups[index].transform.GetChild(1).GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
             }
-            else
-            {
-                popups[index].GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,
-                    Mathf.Lerp(0, popupPrefab.GetComponent<RectTransform>().sizeDelta.y,
-                        popups[index].GetComponent<CanvasGroup>().alpha));
-            }
-            // popups[index].transform.GetChild(1).GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
         }
     }
-
 }

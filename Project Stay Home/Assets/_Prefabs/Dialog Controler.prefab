@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 425356355135553987}
+  - component: {fileID: 5960838513938305171}
   - component: {fileID: 425356355135553988}
   - component: {fileID: 425356355135553989}
   m_Layer: 0
-  m_Name: Popup Messages
+  m_Name: Dialog Controler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,6 +38,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 340, y: 225}
   m_Pivot: {x: 1, y: 1}
+--- !u!114 &5960838513938305171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425356355135553986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4df37173d5c46846aa892cf80a55b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  offset: {x: 0, y: 0}
 --- !u!225 &425356355135553988
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -63,5 +78,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupPrefab: {fileID: 7244205696581960231, guid: ec663732239f4f440be17408cea219e4,
     type: 3}
-  delay: 0
   fadeoutTime: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CanvasGroup))]
 public class FadeInOut : MonoBehaviour
 {
-    public bool enableFadeIn = true;
+    public bool enableFadeIn = true, enableFadeOut = true;
     public float delay, fadeoutTime, fadeinTime;
     float currentTime = 0, fadeTime = 1;
     bool isFadeOut = true;
@@ -21,22 +21,29 @@ public class FadeInOut : MonoBehaviour
 
         fadeInInvoke();
     }
-   // void OnEnable() => controls.VideoPlayer.Enable();
-   // void OnDisable() => controls.VideoPlayer.Disable();
+    // void OnEnable() => controls.VideoPlayer.Enable();
+    // void OnDisable() => controls.VideoPlayer.Disable();
 
     // Update is called once per frame
     void Update()
     {
+        if (!enableFadeOut)
+            return;
         currentTime += Time.deltaTime;
 
         if (currentTime >= delay && isFadeOut)
             InvokeRepeating("fadeOut", 0, .01f);
     }
 
-    void fadeInInvoke()
+    public void fadeInInvoke()
     {
         if (!IsInvoking("fadeIn"))
             InvokeRepeating("fadeIn", 0, .01f);
+    }
+    public void fadeOutInvoke()
+    {
+        if (!IsInvoking("fadeOut"))
+            InvokeRepeating("fadeOut", 0, .01f);
     }
 
     public void fadeIn()
