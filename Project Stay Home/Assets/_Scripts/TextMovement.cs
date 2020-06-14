@@ -6,25 +6,22 @@ using UnityEngine;
 
 namespace TextBoxSystem
 {
+    public enum MovementType
+    {
+        None,
+        Breath
+    }
     public class TextMovement : MonoBehaviour
     {
-        public enum MovementType
-        {
-            None,
-            Breath
-        }
 
         [Tooltip("how the text is suppose to move")]
         public MovementType movement;
-        TMP_Text text;
         bool hasTextChanged = false;
+        TMP_Text text;
 
-        void Awake()
-        {
-            text = GetComponent<TMP_Text>();
-        }
         void Start()
         {
+            text = GetComponent<TMP_Text>() ?? gameObject.AddComponent<TMP_Text>();
             StartCoroutine(Movement());
         }
         void OnEnable()
@@ -37,14 +34,18 @@ namespace TextBoxSystem
         {
             TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(ON_TEXT_CHANGED);
         }
+
+        string laststr;
         void ON_TEXT_CHANGED(Object obj)
         {
-            if (obj = text)
-                hasTextChanged = true;
+            if (obj == text)
+                if (laststr == text.text)
+                    hasTextChanged = true;
         }
         // Update is called once per frame after all updates
         IEnumerator Movement()
         {
+
             text.ForceMeshUpdate();
 
             TMP_TextInfo textInfo = text.textInfo;
@@ -88,12 +89,16 @@ namespace TextBoxSystem
 
                 try
                 {
-                    // Push changes into meshes
-                    for (int i = 0; i < textInfo.meshInfo.Length; i++)
-                    {
-                        textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
-                        text.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
-                    }
+                    //  // Push changes into meshes
+                    //  for (int i = 0; i < textInfo.meshInfo.Length; i++)
+                    //  {
+                    //      textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
+                    //      text.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
+                    //  }
+
+                    // New function which pushes (all) updated vertex data to the appropriate meshes when using either the Mesh Renderer or CanvasRenderer.
+                    text.UpdateVertexData(TMP_VertexDataUpdateFlags.Vertices);
+
                 }
                 catch { print("Text movement failed"); }
 
@@ -149,12 +154,12 @@ namespace TextBoxSystem
 
                 //top left
                 destinationVertices[vertexIndex + 1] = math.lerp(
-                    destinationVertices[vertexIndex + 1] + new Vector3(2.5f, -2.5f, 0),
+                    destinationVertices[vertexIndex + 1] + new Vector3(1.1f, -1.1f, 0),
                     destinationVertices[vertexIndex + 1] + new Vector3(-1, 1, 0),
                     lerpPercent);
                 //top right
                 destinationVertices[vertexIndex + 2] = math.lerp(
-                    destinationVertices[vertexIndex + 2] + new Vector3(-2.5f, -2.5f, 0),
+                    destinationVertices[vertexIndex + 2] + new Vector3(-1.1f, -1.1f, 0),
                     destinationVertices[vertexIndex + 2] + new Vector3(1, 1, 0),
                     lerpPercent);
                 //destinationVertices[vertexIndex + 1] = ;

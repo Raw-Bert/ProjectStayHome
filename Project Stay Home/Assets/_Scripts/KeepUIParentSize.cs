@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeepUISize : MonoBehaviour
+public class KeepUIParentSize : MonoBehaviour
 {
 
+
+    [Tooltip("if no object is set the parent is selected")]
     public GameObject canvas;
     public Vector2 offset;
     // Update is called once per frame

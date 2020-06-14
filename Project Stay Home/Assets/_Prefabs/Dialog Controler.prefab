@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5960838513938305171}
   - component: {fileID: 425356355135553988}
   - component: {fileID: 425356355135553989}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Dialog Controler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 340, y: 225}
+  m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &5960838513938305171
 MonoBehaviour:
@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516f285807987b843970a3d988f4913c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupPrefab: {fileID: 7244205696581960231, guid: ec663732239f4f440be17408cea219e4,
+  dialogPrefab: {fileID: 7244205696581960231, guid: ec663732239f4f440be17408cea219e4,
     type: 3}
-  fadeoutTime: 0
+  narrationPrefab: {fileID: 7244205696581960231, guid: e733fd4b0452802409d5e453c43ed880,
+    type: 3}
+  fadeoutTime: 0.5
