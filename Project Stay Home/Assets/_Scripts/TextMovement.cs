@@ -11,6 +11,7 @@ namespace TextBoxSystem
         None,
         Breath
     }
+
     public class TextMovement : MonoBehaviour
     {
 
@@ -21,7 +22,7 @@ namespace TextBoxSystem
 
         void Start()
         {
-            text = GetComponent<TMP_Text>() ?? gameObject.AddComponent<TMP_Text>();
+            text = gameObject.GetComponent<TMP_Text>() ?? gameObject.AddComponent<TMP_Text>();
             StartCoroutine(Movement());
         }
         void OnEnable()
@@ -36,11 +37,18 @@ namespace TextBoxSystem
         }
 
         string laststr;
+
+        ///<summary>
+        /// Called whenever the mesh data and text has changed  
+        ///</summary>
         void ON_TEXT_CHANGED(Object obj)
         {
             if (obj == text)
-                if (laststr == text.text)
+                if (laststr != text.text)
+                {
+                    laststr = text.text;
                     hasTextChanged = true;
+                }
         }
         // Update is called once per frame after all updates
         IEnumerator Movement()
@@ -62,7 +70,6 @@ namespace TextBoxSystem
                 {
                     // Update the copy of the vertex data for the text object.
                     cachedMeshInfo = textInfo.CopyMeshInfoVertexData();
-
                     hasTextChanged = false;
                 }
 
@@ -87,23 +94,10 @@ namespace TextBoxSystem
                 }
                 //MY CODE END
 
-                try
-                {
-                    //  // Push changes into meshes
-                    //  for (int i = 0; i < textInfo.meshInfo.Length; i++)
-                    //  {
-                    //      textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
-                    //      text.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
-                    //  }
-
-                    // New function which pushes (all) updated vertex data to the appropriate meshes when using either the Mesh Renderer or CanvasRenderer.
-                    text.UpdateVertexData(TMP_VertexDataUpdateFlags.Vertices);
-
-                }
-                catch { print("Text movement failed"); }
+                // New function which pushes (all) updated vertex data to the appropriate meshes when using either the Mesh Renderer or CanvasRenderer.
+                text.UpdateVertexData(TMP_VertexDataUpdateFlags.Vertices);
 
                 yield return new WaitForSeconds(0.1f);
-
             }
         }
 
@@ -120,6 +114,7 @@ namespace TextBoxSystem
         void Breath(ref TMP_TextInfo info, ref TMP_MeshInfo[] originalVerts)
         {
             lerpPercent += speed * (posi ? Time.deltaTime : -Time.deltaTime);
+
             if (lerpPercent > 1)
             {
                 lerpPercent = 1;
@@ -142,11 +137,12 @@ namespace TextBoxSystem
 
                 // Get the index of the first vertex used by this text element.
                 int vertexIndex = info.characterInfo[i].vertexIndex;
+
                 // Get the cached vertices of the mesh used by this text element (character or sprite).
                 Vector3[] sourceVertices = originalVerts[materialIndex].vertices;
 
                 Vector3[] destinationVertices = info.meshInfo[materialIndex].vertices;
-                //info.meshInfo[materialIndex];
+
                 destinationVertices[vertexIndex + 0] = sourceVertices[vertexIndex + 0];
                 destinationVertices[vertexIndex + 1] = sourceVertices[vertexIndex + 1];
                 destinationVertices[vertexIndex + 2] = sourceVertices[vertexIndex + 2];
@@ -162,10 +158,6 @@ namespace TextBoxSystem
                     destinationVertices[vertexIndex + 2] + new Vector3(-1.1f, -1.1f, 0),
                     destinationVertices[vertexIndex + 2] + new Vector3(1, 1, 0),
                     lerpPercent);
-                //destinationVertices[vertexIndex + 1] = ;
-                //destinationVertices[vertexIndex + 2] += new Vector3(speed,speed, 0);
-                //destinationVertices[vertexIndex + 3] += new Vector3(speed,speed, 0);
-
             }
         }
     }
