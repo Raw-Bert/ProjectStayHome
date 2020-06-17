@@ -11,6 +11,7 @@ namespace TextBoxSystem
 
         [Tooltip("Time it takes to fade to nothing")]
         public float fadeoutTime;
+        public bool isDialogInProgress { get; private set; } = false;
         private GameObject currPopup, inst;
         private List<GameObject> dialogBoxes = new List<GameObject>();
         private static List<TextBoxData> dialogData = new List<TextBoxData>();
@@ -133,6 +134,9 @@ namespace TextBoxSystem
              **************** */
             if (dialogBoxes.Count > 0)
             {
+                //the dialog is now in progress
+                isDialogInProgress = true;
+
                 //remove null objects from list
                 if (dialogBoxes[0] == null)
                 {
@@ -191,6 +195,9 @@ namespace TextBoxSystem
                             dialogBoxes[0].GetComponent<CanvasGroup>().alpha));
                 }
             }
+            else
+                //Dialog nolonger in progress;
+                isDialogInProgress = false;
         }
 
         /// <summary>
