@@ -17,8 +17,9 @@ namespace TextBoxSystem
         /// </summary>
         void Awake()
         {
-            continueMarker = GetComponentInChildren<RawImage>();
+            continueMarker = gameObject.GetComponentsInChildren<RawImage>()[1];
         }
+
         /// <summary>
         /// Update is called every frame, if the MonoBehaviour is enabled.
         /// </summary>
