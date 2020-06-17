@@ -25,13 +25,13 @@ namespace TextBoxSystem
 
             TextBoxData tmp = new TextBoxData();
             tmp.textBoxType = TextBoxType.Narration;
-            tmp.addDialogSection("this is a test of the abilities of the text box thingy");
-            tmp.addDialogSection("it could work... probably not though");
+            tmp.addDialogSection("My room looks really messy.");
+            tmp.addDialogSection("Maybe I should clean this place up.");
             CreateDialog.AddNextDialog(tmp);
 
             tmp = new TextBoxData();
             tmp.textBoxType = TextBoxType.Dialog;
-            tmp.name = "EmFresh";
+            tmp.name = "Protag";
             tmp.addDialogSection("OK here is a new one");
             tmp.addDialogSection("I moved it so it looks cooler");
             tmp.setMovement(0, MovementType.Breath);
