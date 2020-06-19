@@ -9,6 +9,8 @@ public class SceneTumble : MonoBehaviour
     public GameObject dialog;
     Vector3 mPreviousPos = Vector3.zero;
     Vector3 mPosDelta = Vector3.zero;
+    public GameObject light;
+    static public bool tumbleEnable = true;
     // Update is called once per frame
     void Update()
     {
