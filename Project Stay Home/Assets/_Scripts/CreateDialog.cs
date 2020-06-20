@@ -11,7 +11,7 @@ namespace TextBoxSystem
 
         [Tooltip("Time it takes to fade to nothing")]
         public float fadeoutTime;
-        public bool isDialogInProgress { get; private set; } = false;
+        static public bool isDialogInProgress { get; private set; } = false;
         private GameObject currPopup, inst;
         private List<GameObject> dialogBoxes = new List<GameObject>();
         private static List<TextBoxData> dialogData = new List<TextBoxData>();
