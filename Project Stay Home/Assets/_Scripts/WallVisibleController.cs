@@ -9,80 +9,112 @@ public class WallVisibleController : MonoBehaviour
     public GameObject wall3;
     public GameObject wall4;
 
-    // Update is called once per frame
-    void Start() {
-        
-    }
     void Update()
     {
         //Set the visibility of wall 1
-        if(this.transform.eulerAngles.y < 45)
+        if (this.transform.eulerAngles.y < 45)
         {
-            wall1.SetActive(true);
+            //wall2.SetActive(true);
+            Color wall2Color = wall1.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 1.0f;
+            wall1.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
         }
-        else if(this.transform.eulerAngles.y > 225)
+        else if (this.transform.eulerAngles.y > 225)
         {
-            wall1.SetActive(true);
+            //wall2.SetActive(true);
+            Color wall2Color = wall1.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 1.0f;
+            wall1.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
         }
         else
         {
-            wall1.SetActive(false);
+            //wall2.SetActive(true);
+            Color wall2Color = wall1.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 0.0f;
+            wall1.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
         }
 
         //Set the visibility of wall 2
         if (this.transform.eulerAngles.y < 135)
         {
             //wall2.SetActive(true);
-            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.color;
+            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
             wall2Color.a = 1.0f;
-            wall2.GetComponent<MeshRenderer>().material.color = wall2Color;
+            wall2.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
             Debug.Log(wall2.GetComponent<MeshRenderer>().material.color.a);
         }
         else if (this.transform.eulerAngles.y > 315)
         {
             //wall2.SetActive(true);
-            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.color;
+            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
             wall2Color.a = 1.0f;
-            wall2.GetComponent<MeshRenderer>().material.color = wall2Color;
+            wall2.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
             Debug.Log(wall2.GetComponent<MeshRenderer>().material.color.a);
-            
+
         }
         else
         {
-           // wall2.SetActive(false);
-            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.color;
+            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
             wall2Color.a = 0.0f;
-            wall2.GetComponent<MeshRenderer>().material.color = wall2Color;
+            wall2.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
             Debug.Log(wall2.GetComponent<MeshRenderer>().material.color.a);
-            //wall2.GetComponent<MeshRenderer>().material.color.a = wall2Color;
         }
 
         //Set the visibility of wall 3
         if (this.transform.eulerAngles.y > 225)
         {
-            wall3.SetActive(false);
+            //wall2.SetActive(true);
+            Color wall2Color = wall3.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 0.0f;
+            wall3.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
         }
         else if (this.transform.eulerAngles.y < 45)
         {
-            wall3.SetActive(false);
+            //wall2.SetActive(true);
+            Color wall2Color = wall3.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 0.0f;
+            wall3.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
         }
         else
         {
-            wall3.SetActive(true);
+            //wall2.SetActive(true);
+            Color wall2Color = wall3.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 1.0f;
+            wall3.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
         }
 
         //Set the visibility of wall 4
         if (this.transform.eulerAngles.y > 315)
         {
-            wall4.SetActive(false);
+            //wall2.SetActive(true);
+            Color wall2Color = wall4.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 0.0f;
+            wall4.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
         }
         else if (this.transform.eulerAngles.y < 135)
         {
-            wall4.SetActive(false);
+            //wall2.SetActive(true);
+            Color wall2Color = wall4.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 0.0f;
+            wall4.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
         }
         else
         {
-            wall4.SetActive(true);
+            //wall2.SetActive(true);
+            Color wall2Color = wall4.GetComponent<MeshRenderer>().material.GetColor("_BaseColor");
+            wall2Color.a = 1.0f;
+            wall4.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", wall2Color);
+
         }
     }
 }
