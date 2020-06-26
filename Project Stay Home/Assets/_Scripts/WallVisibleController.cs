@@ -10,6 +10,9 @@ public class WallVisibleController : MonoBehaviour
     public GameObject wall4;
 
     // Update is called once per frame
+    void Start() {
+        
+    }
     void Update()
     {
         //Set the visibility of wall 1
@@ -29,15 +32,29 @@ public class WallVisibleController : MonoBehaviour
         //Set the visibility of wall 2
         if (this.transform.eulerAngles.y < 135)
         {
-            wall2.SetActive(true);
+            //wall2.SetActive(true);
+            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.color;
+            wall2Color.a = 1.0f;
+            wall2.GetComponent<MeshRenderer>().material.color = wall2Color;
+            Debug.Log(wall2.GetComponent<MeshRenderer>().material.color.a);
         }
         else if (this.transform.eulerAngles.y > 315)
         {
-            wall2.SetActive(true);
+            //wall2.SetActive(true);
+            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.color;
+            wall2Color.a = 1.0f;
+            wall2.GetComponent<MeshRenderer>().material.color = wall2Color;
+            Debug.Log(wall2.GetComponent<MeshRenderer>().material.color.a);
+            
         }
         else
         {
-            wall2.SetActive(false);
+           // wall2.SetActive(false);
+            Color wall2Color = wall2.GetComponent<MeshRenderer>().material.color;
+            wall2Color.a = 0.0f;
+            wall2.GetComponent<MeshRenderer>().material.color = wall2Color;
+            Debug.Log(wall2.GetComponent<MeshRenderer>().material.color.a);
+            //wall2.GetComponent<MeshRenderer>().material.color.a = wall2Color;
         }
 
         //Set the visibility of wall 3
