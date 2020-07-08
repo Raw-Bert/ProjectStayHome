@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+
 namespace TextBoxSystem
 {
     public class CreateDialog : MonoBehaviour
@@ -17,12 +20,96 @@ namespace TextBoxSystem
         private static List<TextBoxData> dialogData = new List<TextBoxData>();
 
         public static void AddNextDialog(TextBoxData msg) => dialogData.Add(msg);
+        public static void AddNextDialog(string dialogFile)
+        {
+            try
+            {
+
+                using(StreamReader stream = new StreamReader(Application.dataPath + "/" + dialogFile))
+                {
+                    TextBoxData data = null;
+                    string textBody = "";
+
+                    for (string line;
+                        (line = stream.ReadLine()) != null;)
+                    {
+                        bool newBox = false;
+
+                        //This is for line comments found in file
+                        while (line.Contains("#"))
+                            if ((line[line.LastIndexOf('#')].ToString() ?? "") != "\\")
+                                line = line.Substring(0, line.LastIndexOf('#'));
+
+                        //Find Name
+                        if (line.Trim().Length > 0)
+                            if (line.Trim()[0] == '[')
+                            {
+                                if (data != null)
+                                    AddNextDialog(data);
+                                textBody = "";
+                                data = new TextBoxData();
+                                data.name = line.Trim().Substring(1, line.Trim().IndexOf(']') - 1);
+                                if (data.name.Length < 1)
+                                    data.name = null;
+                                continue;
+                            }
+
+                      
+                        if (line.Replace(" ","").ToLower().Contains("textboxtype="))
+                        {
+                            string tmp = line.Replace(" ","").ToLower();
+                            switch (tmp.Substring(tmp.IndexOf('=') + 1))
+                            {
+                                case "narration":
+                                    data.textBoxType = TextBoxType.Narration;
+                                    break;
+                                case "dialog":
+                                    data.textBoxType = TextBoxType.Dialog;
+                                    break;
+                                case "internal":
+                                    data.textBoxType = TextBoxType.Internal;
+                                    break;
+                            }
+                            continue;
+                        }
+
+                        //separate the dialog into sections
+                        if (line.Trim() == "" || line.Trim() == @"\endsection")
+                            newBox = true;
+                        else
+                            textBody += line;
+
+                        if (newBox)
+                        {
+                            if (data != null)
+                                if (textBody != "")
+                                    data.addDialogSection(textBody);
+
+                            textBody = "";
+                            newBox = false;
+                        }
+
+                    }
+                    if (data != null)
+                    {
+                        if (data != null)
+                            if (textBody != "")
+                                data.addDialogSection(textBody);
+
+                        AddNextDialog(data);
+                    }
+                }
+            }
+            catch (Exception e) { print("Could not parse dialog:\n" + e); }
+        }
 
         //this is for testing purposes
         void Start()
         {
             //Make sure you have 'using TextBoxSystem;' 
             //for this to work in other classes
+
+            AddNextDialog("Dialog/test dialog.dia");
 
             TextBoxData tmp = new TextBoxData();
             tmp.textBoxType = TextBoxType.Narration;
