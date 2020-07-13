@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="AudioFile" id="{c7cf54df-d564-4a16-a5ba-b906d6caab7e}">
+	<object class="AudioFile" id="{7907152c-5761-4da7-b515-e704cb25ba89}">
 		<property name="assetPath">
-			<value>Book Drop.wav</value>
+			<value>Drop.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

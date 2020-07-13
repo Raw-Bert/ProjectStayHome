@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class IsometricPlayerMovement : MonoBehaviour
 {
@@ -21,9 +22,9 @@ public class IsometricPlayerMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 inputVector = new Vector3(-verticalInput, 0, horizontalInput);
         //inputVector = Vector2.ClampMagnitude(inputVector, 1);
-        Vector3 movement = inputVector * movementSpeed;
+        Vector3 movement = (inputVector * (float3)Camera.main.transform.forward) + (inputVector * (float3)Camera.main.transform.right) * movementSpeed;
         Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
         rbody.MovePosition(newPos);
-        
+
     }
 }

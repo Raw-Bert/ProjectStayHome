@@ -1,146 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7763372529210816104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/SFX.bank
-  SubDir: 
-  lastModified: 637300116390061451
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-6476505988943777568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Master/BGM/Song 1
-  m_EditorClassIdentifier: 
-  Path: event:/Master/BGM/Song 1
-  guid: d14f4653eb55d849b714060564d909cc
-  Banks: []
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5765029667692390213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Master/SFX/Paper Fall
-  m_EditorClassIdentifier: 
-  Path: event:/Master/SFX/Paper Fall
-  guid: db59ed0cce6936489756b2d5075fb01d
-  Banks: []
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4403561830891603974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BGM.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/BGM.bank
-  SubDir: 
-  lastModified: 637300116388269346
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-4137895920110607812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BGM.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/BGM.bank
-  SubDir: 
-  lastModified: 637300056174386609
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-4023450686977532650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Master/Sound FX/Pencil Fall
-  m_EditorClassIdentifier: 
-  Path: event:/Master/Sound FX/Pencil Fall
-  guid: 170e6da74aef3948970bd58d951b4e45
-  Banks:
-  - {fileID: 4515244620986917368}
-  - {fileID: 5197722099405916234}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2463096659901088108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637300056177558602
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-1635059673774176436
+--- !u!114 &-5147815445373330383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,8 +15,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Book Fall
   guid: 849745fa4916964a8cbf1293b598ffaa
   Banks:
-  - {fileID: 4515244620986917368}
-  - {fileID: 5197722099405916234}
+  - {fileID: -2239512443568347344}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -164,7 +23,45 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 371
---- !u!114 &-1217916710402554318
+--- !u!114 &-4387797801647349053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637302599841456512
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1002
+  Exists: 1
+--- !u!114 &-2239512443568347344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Build/Desktop/SFX.bank
+  SubDir: 
+  lastModified: 637302599844830230
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1252911687660290506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,11 +71,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Master/SFX/Pencil Fall
+  m_Name: event:/Master/Background Music/Song 1
   m_EditorClassIdentifier: 
-  Path: event:/Master/SFX/Pencil Fall
+  Path: event:/Master/Background Music/Song 1
+  guid: d14f4653eb55d849b714060564d909cc
+  Banks:
+  - {fileID: 1900816391251927255}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-134827873620887299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Master/Sound FX/Pencil Fall
+  m_EditorClassIdentifier: 
+  Path: event:/Master/Sound FX/Pencil Fall
   guid: 170e6da74aef3948970bd58d951b4e45
-  Banks: []
+  Banks:
+  - {fileID: -2239512443568347344}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -195,51 +116,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Script: {fileID: 0}
   m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp-Editor-firstpass:FMODUnity:EventCache
   EditorBanks:
-  - {fileID: 5173017165532950744}
-  - {fileID: 6766722141659534174}
-  - {fileID: 4515244620986917368}
-  - {fileID: 5197722099405916234}
+  - {fileID: -4387797801647349053}
+  - {fileID: 1900816391251927255}
+  - {fileID: 1813303745983574360}
+  - {fileID: -2239512443568347344}
   EditorEvents:
-  - {fileID: 822231410977716087}
-  - {fileID: -4023450686977532650}
-  - {fileID: -1635059673774176436}
-  - {fileID: 6672587971039803884}
+  - {fileID: -1252911687660290506}
+  - {fileID: -134827873620887299}
+  - {fileID: -5147815445373330383}
+  - {fileID: 7101197708465059259}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4515244620986917368}
+  - {fileID: 1813303745983574360}
   StringsBanks:
-  - {fileID: 5173017165532950744}
-  stringsBankWriteTime: 637300116491778900
+  - {fileID: -4387797801647349053}
+  stringsBankWriteTime: 637302599841456512
   cacheVersion: 3
---- !u!114 &822231410977716087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Master/Background Music/Song 1
-  m_EditorClassIdentifier: 
-  Path: event:/Master/Background Music/Song 1
-  guid: d14f4653eb55d849b714060564d909cc
-  Banks:
-  - {fileID: 6766722141659534174}
-  - {fileID: 4515244620986917368}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2543107619217785922
+--- !u!114 &1813303745983574360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,125 +150,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637300074477839523
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &4228627431655110500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/SFX.bank
-  SubDir: 
-  lastModified: 637300074481475308
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &4515244620986917368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637300116491447151
+  lastModified: 637302599841407712
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &4725915142172977176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Master/SFX/Book Fall
-  m_EditorClassIdentifier: 
-  Path: event:/Master/SFX/Book Fall
-  guid: 849745fa4916964a8cbf1293b598ffaa
-  Banks: []
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 371
---- !u!114 &5134489860860784034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/SFX.bank
-  SubDir: 
-  lastModified: 637300056178134442
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &5173017165532950744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/Master.strings.bank
-  SubDir: 
-  lastModified: 637300116491778900
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1002
-  Exists: 1
---- !u!114 &5197722099405916234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/SFX.bank
-  SubDir: 
-  lastModified: 637300116493307783
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &6093105290391268536
+--- !u!114 &1900816391251927255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -385,11 +168,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/Build/Desktop/BGM.bank
   SubDir: 
-  lastModified: 637300074477273432
+  lastModified: 637302599841329632
   LoadResult: 0
   FileSizes: []
-  Exists: 0
---- !u!114 &6672587971039803884
+  Exists: 1
+--- !u!114 &7101197708465059259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,8 +187,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Paper Fall
   guid: db59ed0cce6936489756b2d5075fb01d
   Banks:
-  - {fileID: 4515244620986917368}
-  - {fileID: 5197722099405916234}
+  - {fileID: -2239512443568347344}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -413,39 +195,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6766722141659534174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BGM.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/BGM.bank
-  SubDir: 
-  lastModified: 637300116489215363
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &7427513628110012993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637300116389436808
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
