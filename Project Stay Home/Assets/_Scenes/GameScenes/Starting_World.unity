@@ -1273,6 +1273,107 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &687539959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b6606ef2548734bb6d11b9d160bc7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 10
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxColor:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0}
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  hdriSky:
+    m_OverrideState: 0
+    m_Value: {fileID: 8900000, guid: 54a3a0570aebe8949bec4966f1376581, type: 3}
+  enableBackplate:
+    m_OverrideState: 0
+    m_Value: 0
+  backplateType:
+    m_OverrideState: 0
+    m_Value: 0
+  groundLevel:
+    m_OverrideState: 0
+    m_Value: 0
+  scale:
+    m_OverrideState: 0
+    m_Value: {x: 32, y: 32}
+  projectionDistance:
+    m_OverrideState: 0
+    m_Value: 16
+    min: 0.0000001
+  plateRotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  plateTexRotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  plateTexOffset:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0}
+  blendAmount:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 100
+  shadowTint:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  pointLightShadow:
+    m_OverrideState: 0
+    m_Value: 0
+  dirLightShadow:
+    m_OverrideState: 0
+    m_Value: 0
+  rectLightShadow:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!1 &722118585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +1838,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &808110935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808110928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Eraser
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &842807119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1878,107 +2002,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 226565023}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &928034481
+--- !u!1 &914790139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6223227440033442731, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &914790146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 914790139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59b6606ef2548734bb6d11b9d160bc7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 10
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxColor:
-    m_OverrideState: 0
-    m_Value: {x: 0, y: 0, z: 0}
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  hdriSky:
-    m_OverrideState: 0
-    m_Value: {fileID: 8900000, guid: 54a3a0570aebe8949bec4966f1376581, type: 3}
-  enableBackplate:
-    m_OverrideState: 0
-    m_Value: 0
-  backplateType:
-    m_OverrideState: 0
-    m_Value: 0
-  groundLevel:
-    m_OverrideState: 0
-    m_Value: 0
-  scale:
-    m_OverrideState: 0
-    m_Value: {x: 32, y: 32}
-  projectionDistance:
-    m_OverrideState: 0
-    m_Value: 16
-    min: 0.0000001
-  plateRotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  plateTexRotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  plateTexOffset:
-    m_OverrideState: 0
-    m_Value: {x: 0, y: 0}
-  blendAmount:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 100
-  shadowTint:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  pointLightShadow:
-    m_OverrideState: 0
-    m_Value: 0
-  dirLightShadow:
-    m_OverrideState: 0
-    m_Value: 0
-  rectLightShadow:
-    m_OverrideState: 0
-    m_Value: 0
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &928502546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6912,6 +6964,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 404425962}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1102156126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6849313422564201327, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1102156133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102156126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &1133048379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7013,6 +7094,35 @@ MonoBehaviour:
   rectLightShadow:
     m_OverrideState: 0
     m_Value: 0
+--- !u!1 &1230959599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5178741403509485941, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1230959606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230959599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Pen
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1262054638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7191,6 +7301,35 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 94104512c556c4a4eba8095ac489becf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7816fa6fbdeede48a5bb463edfb65f1, type: 3}
+--- !u!1 &1295990661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7553039124389130456, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1295990668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295990661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1297650280
 GameObject:
   m_ObjectHideFlags: 0
@@ -7413,6 +7552,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Desk: {fileID: 6453452177686898371}
+--- !u!1 &1300669287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4236372644180841416, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1300669294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300669287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1344838197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7909bfd5dac90ff4181748eac7616463,
@@ -7508,6 +7676,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ab98aa09755de40892c4f421a543d3, type: 3}
+--- !u!1 &1472674544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7553039124365052700, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1472674551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472674544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1504437308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7840,6 +8037,35 @@ Transform:
   m_Father: {fileID: 2023142139}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1568612579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7553039124195674570, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1568612586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568612579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Paper
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1602006254
 GameObject:
   m_ObjectHideFlags: 0
@@ -7872,6 +8098,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1613021282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 834344603573551561, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1613021289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613021282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1732149773
 GameObject:
   m_ObjectHideFlags: 0
@@ -8086,6 +8341,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1262054638}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1762444788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7553039122788000234, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1762444795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762444788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Paper
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1794574012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8307,6 +8591,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1815153376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815153369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Paper
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1827629349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 25a370f70325542409845410faceab85,
@@ -8359,6 +8666,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1827629356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827629349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Paper
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1828244860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5eba6fcaea1e44947b637f9d3356fb30,
@@ -8411,6 +8741,58 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1828244867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828244860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Paper
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &1833323966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3765608400868186936, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1833323973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833323966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1863670137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8878,6 +9260,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb7b1fdde153764996fa127083c45e3, type: 3}
+--- !u!1 &1994615000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7979588811919443059, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994615007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994615000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1998952883
 GameObject:
   m_ObjectHideFlags: 0
@@ -9432,6 +9843,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1972083107}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2090803193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9135094889717676338, guid: 561ce81b22037a7419fae53719ad0cec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2013148645481389769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2090803200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090803193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Master/Sound FX/Drop Notebook
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &2113531939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7cd10fab33d39854b933db84d6b87d7d,
@@ -14243,6 +14683,51 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 84.277596
       objectReference: {fileID: 0}
+    - target: {fileID: 2013148643774731255, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148643774731255, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148643774731255, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148643857185595, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148643857185595, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148643857185595, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644176010168, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644176010168, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644176010168, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
     - target: {fileID: 2013148644196598891, guid: 561ce81b22037a7419fae53719ad0cec,
         type: 3}
       propertyPath: PHObjs.Array.size
@@ -14273,6 +14758,156 @@ PrefabInstance:
       propertyPath: GBObjs.Array.data[4]
       value: 
       objectReference: {fileID: 1815153369}
+    - target: {fileID: 2013148644218015528, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644218015528, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644218015528, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644269378720, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644269378720, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644269378720, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644567400934, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644567400934, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644567400934, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644753218072, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644753218072, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644753218072, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644798348429, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644798348429, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644798348429, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644832003257, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644832003257, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148644832003257, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645025144733, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645025144733, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645025144733, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645129020672, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645129020672, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645129020672, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645220897723, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645220897723, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645220897723, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645371313995, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: RightPlaceSound
+      value: event:/Master/Sound FX/Right Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645371313995, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: WrongPlaceSound
+      value: event:/Master/Sound FX/Wrong Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013148645371313995, guid: 561ce81b22037a7419fae53719ad0cec,
+        type: 3}
+      propertyPath: PickUpSound
+      value: event:/Master/Sound FX/Pick Up
+      objectReference: {fileID: 0}
     - target: {fileID: 2488291434832901197, guid: 561ce81b22037a7419fae53719ad0cec,
         type: 3}
       propertyPath: m_Enabled
@@ -14389,7 +15024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Master/Sound FX/Book Fall
+  Event: event:/Master/Sound FX/Drop Pen
   PlayEvent: 7
   StopEvent: 0
   AllowFadeout: 0
