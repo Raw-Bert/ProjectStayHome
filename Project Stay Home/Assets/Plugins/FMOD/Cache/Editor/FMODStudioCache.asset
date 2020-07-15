@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Drop Eraser
   guid: d60550ee7f582447826b7117b82b78de
   Banks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Right Place
   guid: 7449327f05608f48b971432f58caaba9
   Banks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/_Audio/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637304310091166579
+  lastModified: 637304324098505935
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -279,7 +279,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Pick Up
   guid: 926dbd9f75248a428b89c087563a6542
   Banks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -6269523755456004886}
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   EditorEvents:
   - {fileID: 315043514350595954}
   - {fileID: 5708651822859258424}
@@ -393,10 +393,10 @@ MonoBehaviour:
   - {fileID: 4800682440308406414}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   StringsBanks:
   - {fileID: -6269523755456004886}
-  stringsBankWriteTime: 637304310091166579
+  stringsBankWriteTime: 637304324098505935
   cacheVersion: 3
 --- !u!114 &247338428040504021
 MonoBehaviour:
@@ -435,7 +435,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Drop Pen
   guid: 0012122ef6eb734597e41b209f6cf53f
   Banks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -443,6 +443,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 310
+--- !u!114 &1192887305396469051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/_Audio/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637304324098515934
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1327180237383197238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +478,7 @@ MonoBehaviour:
   lastModified: 637304310091066834
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &2233060253466531014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +530,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Drop Notebook
   guid: 7ba86c506acae8449dc921eaf7cd34c5
   Banks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -535,7 +553,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Wrong Place
   guid: e09ad55c9505914dbce8cba536bb3362
   Banks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -578,7 +596,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Drop Paper
   guid: 69f2d9f55b4e00439aa1d6e7e0760c60
   Banks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -639,7 +657,7 @@ MonoBehaviour:
   Path: event:/Master/Sound FX/Drop Book
   guid: fd6fc6d903197d4aa50b62c040abf635
   Banks:
-  - {fileID: 1327180237383197238}
+  - {fileID: 1192887305396469051}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
