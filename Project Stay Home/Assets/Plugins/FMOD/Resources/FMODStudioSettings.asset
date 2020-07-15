@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: eef8d824ea7b63742966aaa0e94ac383, type: 3}
   m_Name: FMODStudioSettings
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass:FMODUnity:Settings
+  m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Audio/GameAudio.fspro
-  sourceBankPath: Assets\Audio\Build
+  sourceProjectPath: Assets/_Audio/MainGameAudio.fspro
+  sourceBankPath: Assets\_Audio\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -78,8 +78,6 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks:
-  - BGM
-  - SFX
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{0076cb1d-6c96-46a1-a3c9-cdf3d120a4f3}">
+		<property name="assetPath">
+			<value>Drop Pen.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.57916666666666672</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3bac3d56-e990-477c-8d15-232a62fdbaea}</destination>
+		</relationship>
+	</object>
+</objects>

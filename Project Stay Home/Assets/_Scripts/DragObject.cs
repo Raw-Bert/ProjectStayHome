@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using FMOD.Studio;
+using FMODUnity;
 
 public class DragObject : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class DragObject : MonoBehaviour
     static public bool Dragble = false;
 
     public GameObjectType types;
+
+    bool pickUpPlayable = true;
 
     public enum GameObjectType
     {
@@ -44,27 +48,45 @@ public class DragObject : MonoBehaviour
             if (other.tag == "garbageCan" || other.tag == "storageBin")
             {
                 Invoke("backToOriginal", 1);
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Master/Sound FX/Wrong Place");
             }
             if (other.tag == "pencilHolder")
+            {
                 inRightPlace = true;
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Master/Sound FX/Right Place");
+            }
         }
         if (types == GameObjectType.Book)
         {
             if (other.tag == "garbageCan")
             {
                 Invoke("backToOriginal", 1);
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Master/Sound FX/Wrong Place");
             }
             if (other.tag == "storageBin")
+            {
                 inRightPlace = true;
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Master/Sound FX/Right Place");
+            }
         }
         if (types == GameObjectType.Garbage)
         {
             if (other.tag == "storageBin")
             {
                 Invoke("backToOriginal", 1);
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Master/Sound FX/Wrong Place");
             }
             if (other.tag == "garbageCan")
+            {
                 inRightPlace = true;
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Master/Sound FX/Right Place");
+            }
         }
     }
 
@@ -108,6 +130,12 @@ public class DragObject : MonoBehaviour
             transform.position = MouseWorldPos() + mouseOffSet + horizontalOffSet;
             if (activeDragRotation)
                 transform.localEulerAngles = dragRotation;
+
+            if (pickUpPlayable)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Master/Sound FX/Pick Up");
+                pickUpPlayable = false;
+            }
         }
     }
 
@@ -116,6 +144,8 @@ public class DragObject : MonoBehaviour
         DeskCleaningGameManager.showGBCircle = false;
         DeskCleaningGameManager.showPHCircle = false;
         DeskCleaningGameManager.showSBSquare = false;
+
+        pickUpPlayable = true;
     }
 
     private Vector3 MouseWorldPos()
