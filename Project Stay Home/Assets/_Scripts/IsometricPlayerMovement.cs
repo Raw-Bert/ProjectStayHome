@@ -6,7 +6,6 @@ public class IsometricPlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float movementSpeed = 1.0f;
-
     Rigidbody rbody;
     private void Awake()
     {
@@ -16,14 +15,16 @@ public class IsometricPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 currentPos = rbody.position;
+        Vector3 currentPos = rbody.gameObject.transform.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        Vector3 inputVector = new Vector3(-verticalInput, 0, horizontalInput);
-        //inputVector = Vector2.ClampMagnitude(inputVector, 1);
+        Vector3 inputVector = Camera.main.transform.forward * verticalInput + Camera.main.transform.right * horizontalInput;
+        inputVector = inputVector.normalized;
         Vector3 movement = inputVector * movementSpeed;
         Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
-        rbody.MovePosition(newPos);
-        
+        rbody.gameObject.transform.position = newPos;
+
+        print("Veritcal output = " + verticalInput);
+        print("Horizontal output = " + horizontalInput);
     }
 }

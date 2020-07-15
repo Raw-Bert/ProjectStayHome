@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: ce536060d227a704ab04381dfb690067
+guid: 8c0e04596737c1749ad4465aa64148dd
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cork
-    second: {fileID: 2800000, guid: f73501d78bf52f549bb453cfa5339fe1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: roomPalette
-    second: {fileID: 2800000, guid: 24c809b7ecd00264c8ffb8316c70a334, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
