@@ -26,25 +26,31 @@ namespace TextBoxSystem
 
             TextBoxData tmp = new TextBoxData();
             tmp.textBoxType = TextBoxType.Narration;
-            tmp.addDialogSection("My room looks really messy.");
-            tmp.addDialogSection("Maybe I should clean this place up.");
+            tmp.addDialogSection("Well, I’m back here again.");
+            tmp.addDialogSection("Everything’s just how I left it…");
+            tmp.addDialogSection("..after I had to rush out last time.");
+            tmp.addDialogSection("Yikes.");
+            tmp.addDialogSection("Sorry for leaving my room like this all these months, Mom.");
+            tmp.addDialogSection("Guess I should take the time to clean up now. Before dinner.");
+            tmp.addDialogSection("Alright, let’s see…");
+            tmp.addDialogSection("I’ll start with you, desk.");
             CreateDialog.AddNextDialog(tmp);
 
-            tmp = new TextBoxData();
-            tmp.textBoxType = TextBoxType.Dialog;
-            tmp.name = "Protag";
-            tmp.addDialogSection("OK here is a new one");
-            tmp.addDialogSection("I moved it so it looks cooler");
-            tmp.setMovement(0, MovementType.Breath);
-            tmp.setMovement(1, MovementType.None);
-            tmp.position = new float2(250, 150);
-            CreateDialog.AddNextDialog(tmp);
-
-            tmp = new TextBoxData();
-            tmp.textBoxType = TextBoxType.Internal;
-            tmp.setMovement(0, MovementType.Breath);
-            tmp.addDialogSection("Who am I?");
-            CreateDialog.AddNextDialog(tmp);
+            //tmp = new TextBoxData();
+            //tmp.textBoxType = TextBoxType.Dialog;
+            //tmp.name = "Protag";
+            //tmp.addDialogSection("OK here is a new one");
+            //tmp.addDialogSection("I moved it so it looks cooler");
+            //tmp.setMovement(0, MovementType.Breath);
+            //tmp.setMovement(1, MovementType.None);
+            //tmp.position = new float2(250, 150);
+            //CreateDialog.AddNextDialog(tmp);
+            //
+            //tmp = new TextBoxData();
+            //tmp.textBoxType = TextBoxType.Internal;
+            //tmp.setMovement(0, MovementType.Breath);
+            //tmp.addDialogSection("Who am I?");
+            //CreateDialog.AddNextDialog(tmp);
 
         }
 
