@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/_Audio/MainGameAudio.fspro
-  sourceBankPath: Assets\_Audio\Build
+  sourceProjectPath: Assets/Audio/MainGameAudio.fspro
+  sourceBankPath: Assets\Audio\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
