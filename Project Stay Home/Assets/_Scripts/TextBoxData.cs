@@ -22,7 +22,7 @@ namespace TextBoxSystem
         ///<summary>
         /// Text box type to desplay (i.e. Narration, Dialog, Internal)
         ///</summary>
-        public TextBoxType textBoxType { get; set; }
+        public TextBoxType textBoxType { get; set; } = TextBoxType.Dialog;
 
         ///<summary>
         /// changes how each section
