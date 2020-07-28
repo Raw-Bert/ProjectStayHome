@@ -11,7 +11,8 @@ namespace TextBoxSystem
     public class TextReveal : MonoBehaviour
     {
         //used in inspector:
-        public float speed = 100, minspeed = 50;
+        public float speed { get; set; } = 0;
+        public float minspeed { get; set; } = 5;
 
         //only used in code (will not show in inspector):
         public bool isRevealComplete { get; private set; }
@@ -96,8 +97,13 @@ namespace TextBoxSystem
 
             yield return new WaitForSeconds(.25f);
 
+            float currentTime = Time.time, lastTime = currentTime;
             while (true)
             {
+                lastTime = currentTime;
+                currentTime = Time.time;
+
+                float dt = currentTime - lastTime;
 
                 if (hasTextChanged)
                 {
@@ -144,7 +150,7 @@ namespace TextBoxSystem
                 else
                 {
                     currentChar++;
-                    percent -= Time.deltaTime * (speed * 2 + minspeed);
+                    percent -= dt * (speed * 2 + minspeed);
                 }
 
                 if (percent >= 1)

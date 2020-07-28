@@ -17,6 +17,7 @@ namespace TextBoxSystem
 
         [Tooltip("how the text is suppose to move")]
         public MovementType movement;
+        public float speed{ set; get; } = 1;
         bool hasTextChanged = false;
         TMP_Text text;
 
@@ -63,8 +64,13 @@ namespace TextBoxSystem
 
             hasTextChanged = true;
 
+            yield return new WaitForSeconds(0.25f);
+            float currentTime = Time.time, lastTime;
             while (true)
             {
+                lastTime = currentTime;
+                currentTime = Time.time;
+
                 // Allocate new vertices 
                 if (hasTextChanged)
                 {
@@ -89,7 +95,7 @@ namespace TextBoxSystem
                         yield return new WaitForSeconds(0.25f);
                         continue;
                     case MovementType.Breath:
-                        Breath(ref textInfo, ref cachedMeshInfo);
+                        Breath(ref textInfo, ref cachedMeshInfo, currentTime - lastTime);
                         break;
                 }
                 //MY CODE END
@@ -97,7 +103,7 @@ namespace TextBoxSystem
                 // New function which pushes (all) updated vertex data to the appropriate meshes when using either the Mesh Renderer or CanvasRenderer.
                 text.UpdateVertexData(TMP_VertexDataUpdateFlags.Vertices);
 
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.01f);
             }
         }
 
@@ -109,11 +115,13 @@ namespace TextBoxSystem
             StopCoroutine(Movement());
         }
 
-        float lerpPercent = 0, speed = 10;
+        //for Breath only
         bool posi = true;
-        void Breath(ref TMP_TextInfo info, ref TMP_MeshInfo[] originalVerts)
+        float lerpPercent = 0;
+        void Breath(ref TMP_TextInfo info, ref TMP_MeshInfo[] originalVerts, float dt)
         {
-            lerpPercent += speed * (posi ? Time.deltaTime : -Time.deltaTime);
+
+            lerpPercent += speed * .5f * (posi ? dt : -dt);
 
             if (lerpPercent > 1)
             {
