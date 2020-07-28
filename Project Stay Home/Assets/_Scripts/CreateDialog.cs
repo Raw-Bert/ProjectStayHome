@@ -11,10 +11,12 @@ namespace TextBoxSystem
     public class CreateDialog : MonoBehaviour
     {
         public GameObject dialogPrefab, narrationPrefab;
-
         [Tooltip("Time it takes to fade to nothing")]
         public float fadeoutTime;
+        public float textRevealSpeed;
+
         static public bool isDialogInProgress { get; private set; } = false;
+
         private GameObject currPopup, inst;
         private List<GameObject> dialogBoxes = new List<GameObject>();
         private static List<TextBoxData> dialogData = new List<TextBoxData>();
@@ -45,7 +47,11 @@ namespace TextBoxSystem
                             if (line.Trim()[0] == '[')
                             {
                                 if (data != null)
+                                {
+                                    if (textBody.Trim().Length > 0)
+                                        data.addDialogSection(textBody);
                                     AddNextDialog(data);
+                                }
                                 textBody = "";
                                 data = new TextBoxData();
                                 data.name = line.Trim().Substring(1, line.Trim().IndexOf(']') - 1);
@@ -54,10 +60,9 @@ namespace TextBoxSystem
                                 continue;
                             }
 
-                      
-                        if (line.Replace(" ","").ToLower().Contains("textboxtype="))
+                        if (line.Replace(" ", "").ToLower().Contains("textboxtype="))
                         {
-                            string tmp = line.Replace(" ","").ToLower();
+                            string tmp = line.Replace(" ", "").ToLower();
                             switch (tmp.Substring(tmp.IndexOf('=') + 1))
                             {
                                 case "narration":
@@ -177,7 +182,7 @@ namespace TextBoxSystem
                 //set what type of text effect is applied
                 if (dialogData[0].movement.Count > 0)
                 {
-                    inst.GetComponentInChildren<TextMovement>(). //
+                    inst.GetComponentInChildren<TextMovement>(). //continues next line
                     movement = dialogData[0].movement[0];
                 }
 
@@ -205,6 +210,9 @@ namespace TextBoxSystem
                             break;
 
                     }
+
+                    //Set how quickly text will reveal 
+                    inst.GetComponentInChildren<TextReveal>().speed = textRevealSpeed;
                 }
 
                 //place ancor point in the bottom left corner
