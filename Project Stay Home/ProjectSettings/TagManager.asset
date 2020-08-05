@@ -8,6 +8,7 @@ TagManager:
   - garbageCan
   - storageBin
   - pencilHolder
+  - MainCharacter
   layers:
   - Default
   - TransparentFX

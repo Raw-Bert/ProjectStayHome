@@ -25,7 +25,7 @@ public class IsometricPlayerMovement : MonoBehaviour
         Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
         rbody.gameObject.transform.position = newPos;
 
-        print("Veritcal output = " + verticalInput);
-        print("Horizontal output = " + horizontalInput);
+        //print("Veritcal output = " + verticalInput);
+        //print("Horizontal output = " + horizontalInput);
     }
 }
