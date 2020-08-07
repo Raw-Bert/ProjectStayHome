@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class DeskInteraction : MonoBehaviour
 {
-    public bool interactableDesk = true;
+    public bool interactableDesk = false;
+    public GameObject hitBox;
 
     private void OnMouseDown()
     {
@@ -14,5 +15,19 @@ public class DeskInteraction : MonoBehaviour
         if(interactableDesk)
             if (!CameraController.isZoom && !CreateDialog.isDialogInProgress)
                 CameraController.isclickedTable = true;
+    }
+     void Update() {
+        {
+            if (hitBox.GetComponent<GlowWhenNear>().glow == true)
+            {
+                interactableDesk = true;
+                Debug.Log(hitBox.GetComponent<GlowWhenNear>().glow);
+            }
+
+            else 
+            {
+                interactableDesk = false;
+            }
+        }
     }
 }

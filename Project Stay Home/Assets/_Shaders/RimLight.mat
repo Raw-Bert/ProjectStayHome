@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RimLight
+  m_Shader: {fileID: -6465566751694194690, guid: 6c3c43546033d5445a1d274043a24f87,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_6E244761_Texture_1:
+        m_Texture: {fileID: 2800000, guid: a79263a9abc1bda4589f773835c05dee, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_786B47EE_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 8ec49faa175afce4a8a5b2a8f169a806, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_82F64F9B: 1.5
+    m_Colors:
+    - Color_323DC1EE: {r: 0.6022403, g: 1, b: 0, a: 0}
+    - Color_A1C9903E: {r: 0.54901963, g: 0.45490196, b: 0.3647059, a: 0}
