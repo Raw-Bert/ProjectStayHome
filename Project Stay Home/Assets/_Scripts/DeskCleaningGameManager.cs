@@ -9,6 +9,7 @@ public class DeskCleaningGameManager : MonoBehaviour
     public GameObject GarbageBin;
     public GameObject PencilHolder;
     public GameObject StorageBin;
+    public GameObject Paper;
 
     public Image GBCircle;
     public Image GBCheckMark;
@@ -17,6 +18,7 @@ public class DeskCleaningGameManager : MonoBehaviour
     public Image SBSquare;
     public Image SBCheckMark;
     public Text Exit;
+    public Image PaperOutline;
 
     public List<GameObject> GBObjs;
     public List<GameObject> PHObjs;
@@ -25,6 +27,11 @@ public class DeskCleaningGameManager : MonoBehaviour
     static public bool showGBCircle = false;
     static public bool showPHCircle = false;
     static public bool showSBSquare = false;
+
+    bool paperCliked = false;
+    public bool paperOutlineBlink = false;
+
+    public float blinkSpeed = 5f;
 
     Vector3 GBCheckMarkOriginalScale;
     Vector3 PHCheckMarkOriginalScale;
@@ -87,14 +94,55 @@ public class DeskCleaningGameManager : MonoBehaviour
                 SBCheckMark.gameObject.SetActive(false);
 
             if (GBTmp && PHTmp && SBTmp)
+            {
                 Desk.GetComponent<DeskInteraction>().interactableDesk = false;
+                Paper.GetComponent<PaperInteraction>().interactablePaper = true;
+            }
         }
         else
         {
-            Exit.enabled = true;
-            GBCheckMark.gameObject.transform.localScale = Vector3.Lerp(GBCheckMark.gameObject.transform.localScale, GBCheckMarkOriginalScale * 0, Time.deltaTime * 5f);
-            PHCheckMark.gameObject.transform.localScale = Vector3.Lerp(PHCheckMark.gameObject.transform.localScale, PHCheckMarkOriginalScale * 0, Time.deltaTime * 5f);
-            SBCheckMark.gameObject.transform.localScale = Vector3.Lerp(SBCheckMark.gameObject.transform.localScale, SBCheckMarkOriginalScale * 0, Time.deltaTime * 5f);
+            if (paperCliked)
+            {
+                Exit.enabled = true;
+            }
+            else
+            {
+                GBCheckMark.gameObject.transform.localScale = Vector3.Lerp(GBCheckMark.gameObject.transform.localScale, GBCheckMarkOriginalScale * 0, Time.deltaTime * 5f);
+                PHCheckMark.gameObject.transform.localScale = Vector3.Lerp(PHCheckMark.gameObject.transform.localScale, PHCheckMarkOriginalScale * 0, Time.deltaTime * 5f);
+                SBCheckMark.gameObject.transform.localScale = Vector3.Lerp(SBCheckMark.gameObject.transform.localScale, SBCheckMarkOriginalScale * 0, Time.deltaTime * 5f);
+
+                if (paperOutlineBlink)
+                {
+                    Color tmp = PaperOutline.color;
+                    tmp.a = Mathf.Lerp(tmp.a, 0, Time.deltaTime * blinkSpeed);
+                    PaperOutline.color = tmp;
+
+                    if (tmp.a < 0.01)
+                        paperOutlineBlink = false;
+                }
+                else
+                {
+                    Color tmp = PaperOutline.color;
+                    tmp.a = Mathf.Lerp(tmp.a, 1, Time.deltaTime * blinkSpeed);
+                    PaperOutline.color = tmp;
+
+                    if (tmp.a > 0.99)
+                        paperOutlineBlink = true;
+                }
+
+                if (Paper.GetComponent<PaperInteraction>().movePaper == true)
+                {
+
+                    Paper.transform.position = new Vector3(Camera.main.transform.position.x, Paper.transform.position.y + 4, Camera.main.transform.position.z);
+                    Paper.transform.localEulerAngles = new Vector3(0, 0, 0);
+                    Paper.transform.localScale = new Vector3(Paper.transform.localScale.x * 5, Paper.transform.localScale.y, Paper.transform.localScale.z * 5);
+
+                    PaperOutline.enabled = false;
+
+                    Paper.GetComponent<PaperInteraction>().movePaper = false;
+                    paperCliked = true;
+                }
+            }
         }
 
         if (!DragObject.Dragble)
@@ -103,6 +151,8 @@ public class DeskCleaningGameManager : MonoBehaviour
             PHCheckMark.gameObject.SetActive(false);
             SBCheckMark.gameObject.SetActive(false);
             Exit.enabled = false;
+            if (paperCliked == true)
+                Paper.SetActive(false);
         }
     }
 
