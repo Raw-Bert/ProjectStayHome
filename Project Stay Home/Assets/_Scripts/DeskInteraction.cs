@@ -23,11 +23,6 @@ public class DeskInteraction : MonoBehaviour
                 interactableDesk = true;
                 Debug.Log(hitBox.GetComponent<GlowWhenNear>().glow);
             }
-
-            else 
-            {
-                interactableDesk = false;
-            }
         }
     }
 }
