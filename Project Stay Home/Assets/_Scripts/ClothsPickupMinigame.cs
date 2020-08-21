@@ -50,9 +50,11 @@ public class ClothsPickupMinigame : MonoBehaviour
         uiTrans.position = Vector3.zero;
         uiTrans.rotation = Quaternion.identity;
         uiTrans.localScale = Vector3.one;
+        uiTrans.sizeDelta = new float2(50, 50);
         uiTrans.ForceUpdateRectTransforms();
 
         uiTrans.anchoredPosition = new float2(0, 0);
+
         if (canvas.transform.childCount > 2)
         {
             var lastItem = canvas.transform.GetChild(canvas.transform.childCount - 2).GetComponent<RectTransform>();
