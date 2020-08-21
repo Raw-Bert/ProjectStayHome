@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RimLight_Pulse
-  m_Shader: {fileID: -6465566751694194690, guid: 25ff3eaf06658754db181dad3062f764,
+  m_Shader: {fileID: -6465566751694194690, guid: 6c3c43546033d5445a1d274043a24f87,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 1
@@ -23,10 +23,16 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
+    - Vector1_82F64F9B: 1.5
     - Vector1_A49A8FA3: 1
     - Vector1_A9EA4E3B: 1.4
+    - Vector1_C6BB0BFA: 5
     m_Colors:
     - Color_2C667904: {r: 0.54901963, g: 0.45490196, b: 0.3647059, a: 0}
     - Color_312F5875: {r: 0.29803923, g: 4, b: 0, a: 0}
+    - Color_323DC1EE: {r: 0.5852141, g: 1, b: 0, a: 0}
+    - Color_A1C9903E: {r: 0.46226412, g: 0.23962358, b: 0.07631717, a: 0}
     - Color_CB13B01E: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_41C2C0DE: {r: -1, g: 1, b: 0, a: 0}
     - Vector2_46D34C58: {r: 0.3, g: 1, b: 0, a: 0}
+    - Vector2_A7E7FB9A: {r: 0, g: 1, b: 0, a: 0}

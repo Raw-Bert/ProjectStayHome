@@ -50,7 +50,7 @@ public class ClothsPickupMinigame : MonoBehaviour
         uiTrans.position = Vector3.zero;
         uiTrans.rotation = Quaternion.identity;
         uiTrans.localScale = Vector3.one;
-        uiTrans.sizeDelta = new float2(50, 50);
+        uiTrans.sizeDelta = new float2(25, 25);//ui start size
         uiTrans.ForceUpdateRectTransforms();
 
         uiTrans.anchoredPosition = new float2(0, 0);
