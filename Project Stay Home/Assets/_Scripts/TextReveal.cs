@@ -11,7 +11,7 @@ namespace TextBoxSystem
     public class TextReveal : MonoBehaviour
     {
         //used in inspector:
-        public float speed = 5, minspeed = 50;
+        public float speed = 100, minspeed = 50;
 
         //only used in code (will not show in inspector):
         public bool isRevealComplete { get; private set; }
@@ -104,7 +104,7 @@ namespace TextBoxSystem
                     currentChar = 0;
                     isRevealComplete = false;
 
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0.15f);
 
                     hasTextChanged = false;
                     continue;
@@ -113,7 +113,7 @@ namespace TextBoxSystem
                 if (currentChar >= textToReveal.textInfo.characterCount)
                 {
                     isRevealComplete = true;
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0.15f);
                     continue;
                 }
 
@@ -121,6 +121,7 @@ namespace TextBoxSystem
                 int vertIndex = textToReveal.textInfo.characterInfo[currentChar].vertexIndex;
                 var colourReplace = textToReveal.textInfo.meshInfo[meshIndex].colors32;
 
+                percent += Time.deltaTime * (speed * 2 + minspeed);
                 if (textToReveal.text[currentChar] != ' ')
                 {
                     if (percent <= .5f)
@@ -146,11 +147,10 @@ namespace TextBoxSystem
                     percent -= Time.deltaTime * (speed * 2 + minspeed);
                 }
 
-                percent += Time.deltaTime * (speed * 2 + minspeed);
                 if (percent >= 1)
                 {
 
-                    for (int index = 0; index < (int)percent; index++)
+                    for (int index = 0; index < (int)Mathf.Floor(percent); index++)
                     {
                         vertIndex = textToReveal.textInfo.characterInfo[currentChar + index].vertexIndex;
 
@@ -159,12 +159,12 @@ namespace TextBoxSystem
                         colourReplace[vertIndex + 2].a = (byte)(255);
                         colourReplace[vertIndex + 3].a = (byte)(255);
                     }
-                    currentChar += (int)(percent);
+                    currentChar += (int)(Mathf.Floor(percent));
                     percent %= 1;
                 }
 
                 textToReveal.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.01f);
             }
         }
     }
